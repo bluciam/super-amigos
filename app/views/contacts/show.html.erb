@@ -1,3 +1,10 @@
+
+
+<div class="container">
+<h1>
+  <%= @contact.firstname %>
+  <%= @contact.lastname %>
+  </h1>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -6,54 +13,39 @@
 </p>
 
 <p>
-  <strong>Firstname:</strong>
-  <%= @contact.firstname %>
-</p>
-
-<p>
-  <strong>Lastname:</strong>
-  <%= @contact.lastname %>
-</p>
-
-<p>
-  <strong>Streetname:</strong>
+  <%= @contact.streetnumber %>
   <%= @contact.streetname %>
 </p>
 
-<p>
-  <strong>Streetnumber:</strong>
-  <%= @contact.streetnumber %>
-</p>
+  <% if @contact.aptnumber != "" %>
+    <p>
+      # <%= @contact.aptnumber %>
+    </p>
+  <% end %>
 
 <p>
-  <strong>Aptnumber:</strong>
-  <%= @contact.aptnumber %>
-</p>
-
-<p>
-  <strong>City:</strong>
   <%= @contact.city %>
-</p>
-
-<p>
-  <strong>Country:</strong>
+  <%= @contact.state %>
   <%= @contact.country %>
 </p>
 
-<p>
-  <strong>State:</strong>
-  <%= @contact.state %>
-</p>
-
+  <% if @contact.telephone != "" %>
 <p>
   <strong>Telephone:</strong>
   <%= @contact.telephone %>
 </p>
+  <% end %>
 
 <p>
   <strong>Mobile:</strong>
   <%= @contact.mobile %>
 </p>
 
-<%= link_to 'Edit', edit_contact_path(@contact) %> |
-<%= link_to 'Back', contacts_path %>
+<p>
+  <strong>Eamil:</strong>
+  <%= @contact.email %>
+</p>
+
+<%= link_to 'Edit', edit_contact_path(@contact), class: "btn btn-primary" %> 
+<%= link_to 'Back', contacts_path, class: "btn btn-primary" %>
+</div>
