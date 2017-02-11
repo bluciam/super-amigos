@@ -12,7 +12,7 @@
 
   <%= @contact.streetnumber %>
   <%= @contact.streetname %>
-  <% if @contact.aptnumber %>
+  <% if @contact.aptnumber.nil? %>
     , Apt. 
     <%= @contact.aptnumber %>
   <% end %>
