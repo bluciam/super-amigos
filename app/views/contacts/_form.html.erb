@@ -11,64 +11,156 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :nickname %>
-    <%= f.text_field :nickname %>
-  </div>
+  <div class="table-responsive">
+  <table class="table" width="80%">
+  <tr class="warning">
+    <th>
+    <%= f.label "Nickname" %>
+    </th>
+    <td>
+    <%= f.text_field :nickname, size: 30 %>
+    </td>
+  </tr>
 
   <div class="field">
-    <%= f.label :firstname %>
+  <tr>
+    <th>
+    <%= f.label "First Name" %>
+    </th>
+    <td>
     <%= f.text_field :firstname %>
+    </td>
+  </tr>
   </div>
 
   <div class="field">
-    <%= f.label :lastname %>
+  <tr>
+    <th>
+    <%= f.label "Last Name" %>
+    </th>
+    <td>
     <%= f.text_field :lastname %>
+    </td>
+  </tr>
   </div>
 
   <div class="field">
-    <%= f.label :streetname %>
-    <%= f.text_field :streetname %>
-  </div>
-
-  <div class="field">
-    <%= f.label :streetnumber %>
+  <tr>
+    <th>
+    <%= f.label "Number" %>
+    </th>
+    <td>
     <%= f.number_field :streetnumber %>
+    </td>
+  </tr>
   </div>
 
   <div class="field">
-    <%= f.label :aptnumber %>
+  <tr>
+    <th>
+    <%= f.label "Street Name" %>
+    </th>
+    <td>
+    <%= f.text_field :streetname %>
+    </td>
+  </tr>
+  </div>
+
+  <div class="field">
+  <tr>
+    <th>
+    <%= f.label "Apartement" %>
+    </th>
+    <td>
     <%= f.text_field :aptnumber %>
+    </td>
+  </tr>
   </div>
 
   <div class="field">
-    <%= f.label :city %>
+  <tr>
+    <th>
+    <%= f.label "City" %>
+    </th>
+    <td>
     <%= f.text_field :city %>
+    </td>
+  </tr>
   </div>
 
   <div class="field">
-    <%= f.label :country %>
+  <tr>
+    <th>
+    <%= f.label "Country" %>
+    </th>
+    <td>
     <%= f.text_field :country %>
+    </td>
+  </tr>
   </div>
 
   <div class="field">
-    <%= f.label :state %>
+  <tr>
+    <th>
+    <%= f.label "State" %>
+    </th>
+    <td>
     <%= f.text_field :state %>
+    </td>
+  </tr>
   </div>
 
   <div class="field">
+  <tr>
+    <th>
     <%= f.label "Postal Code" %>
+    </th>
+    <td>
     <%= f.text_field :postal_code %>
+    </td>
+  </tr>
   </div>
 
+    <tr>
+      <th>
+        <%= f.label "Mobile" %>
+      </th>
+      <td>
+        <%= f.text_field :mobile %>
+      </td>
+    </tr>
+
   <div class="field">
-    <%= f.label :telephone %>
+  <tr>
+    <th>
+    <%= f.label "Telephone" %>
+    </th>
+    <td>
     <%= f.text_field :telephone %>
+    </td>
+  </tr>
   </div>
 
-  <div class="field">
-    <%= f.label :mobile %>
-    <%= f.text_field :mobile %>
+  <tr>
+    <th>
+    <%= f.label "Email" %>
+    </th>
+    <td>
+    <%= f.text_field :email %>
+    </td>
+  </tr>
+
+  <tr>
+    <th>
+    <%= f.label "Notes" %>
+    </th>
+    <td>
+    <%= f.text_field :notes %>
+    </td>
+  </tr>
+
+  </div>
+  </table>
   </div>
 
   <div class="actions">

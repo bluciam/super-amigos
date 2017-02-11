@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20170119144748) do
     t.datetime "updated_at",   null: false
     t.string   "postal_code"
     t.string   "notes"
+    t.string   "email"
   end
 
 end

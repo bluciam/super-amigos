@@ -1,12 +1,13 @@
-<p id="notice"><%= notice %></p>
 
-<p><b>
+<div class="container">
+<p id="notice"><%= notice %></p>
+<p><h1>
   <%= @contact.firstname %>
   <%= @contact.lastname %>
   (
   <%= @contact.nickname %>
   )
-  </b>
+  </h1>
   <br>
 
   <%= @contact.streetnumber %>
@@ -21,22 +22,23 @@
   <%= @contact.country %>
   <br>
   <%= @contact.postal_code %>
-</p>
 
-<p>
+  <br>
   <%= @contact.telephone %>
-</p>
-
-<p>
   <%= @contact.mobile %>
-</p>
 
-<% if @contact.notes %>
+  <% if @contact.notes %>
+    <p>
+      <strong>Notes:</strong>
+      <%= @contact.notes %>
+    </p>
+  <% end %>
+
   <p>
-    <strong>Notes:</strong>
-    <%= @contact.notes %>
+    <strong>Email:</strong>
+    <%= @contact.email %>
   </p>
-<% end %>
 
-<%= link_to 'Edit', edit_contact_path(@contact) %> |
-<%= link_to 'Back', contacts_path %>
+  <%= link_to 'Edit', edit_contact_path(@contact), class: "btn btn-primary" %> 
+  <%= link_to 'Back', contacts_path, class: "btn btn-primary" %>
+</div>
