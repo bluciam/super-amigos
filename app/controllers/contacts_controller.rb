@@ -5,6 +5,14 @@ class ContactsController < ApplicationController
   # GET /contacts.json
   def index
     @contacts = Contact.all
+    @c_hash = {}
+    @contacts.each do |c|
+      i = initial(c.lastname)
+      @c_hash[i] ||= []
+      @c_hash[i] << c
+    end
+    @c_hash_o = @c_hash.sort.to_h
+
   end
 
   # GET /contacts/1
@@ -61,6 +69,7 @@ class ContactsController < ApplicationController
     end
   end
 
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_contact
@@ -73,4 +82,11 @@ class ContactsController < ApplicationController
       :streetname, :streetnumber, :aptnumber, :city, :country, :state,
       :telephone, :mobile, :email, :notes, :postal_code)
     end
+
+#  class String
+    def initial(string)
+      string[0,1].capitalize
+    end
+#  end
+
 end

@@ -29,9 +29,9 @@ ActiveRecord::Schema.define(version: 20170119144748) do
     t.string   "mobile"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.string   "email"
     t.string   "postal_code"
     t.string   "notes"
-    t.string   "email"
   end
 
 end

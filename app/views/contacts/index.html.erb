@@ -16,18 +16,30 @@
   </thead>
 
   <tbody>
-    <% @contacts.each do |contact| %>
-      <tr>
-        <td><%= contact.firstname %> <%= contact.lastname %></td>
-        <td><%= contact.city %></td>
-        <td><%= contact.country %></td>
-        <td><%= contact.mobile %></td>
-        <td><%= contact.email %></td>
-        <td><%= link_to 'Show more', contact %></td>
-        <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
-        <td><%= link_to 'Destroy', contact, method: :delete, data: { confirm:
-        'Are you sure?' }, class: "del" %></td>
-      </tr>
+    <% @c_hash_o.each do |i, contacts| %>
+
+          <tr>
+      <td>
+      <b>
+      <%= i %>
+      </b>
+      <td>
+          </tr>
+
+
+        <% contacts.each do |contact| %>
+          <tr>
+            <td><%= contact.firstname %> <%= contact.lastname %></td>
+            <td><%= contact.city %></td>
+            <td><%= contact.country %></td>
+            <td><%= contact.mobile %></td>
+            <td><%= contact.email %></td>
+            <td><%= link_to 'Show more', contact %></td>
+            <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
+            <td><%= link_to 'Destroy', contact, method: :delete, data: { confirm:
+            'Are you sure?' }, class: "del" %></td>
+          </tr>
+        <% end %>
     <% end %>
   </tbody>
 </table>
