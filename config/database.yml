@@ -5,16 +5,16 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: postgresql
   encosding: unicode
   pool: 5
   timeout: 5000
-  username: mycontacts
-  pasword: mycontacts
+  username: mancilla
+  pasword: mancilla
   host: localhost
 
 development:
   <<: *default
+  adapter: sqlite3
   database: mycontacts
 
 # Warning: The database defined as "test" will be erased and
@@ -22,8 +22,10 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
+  adapter: sqlite3
   database: mycontacts_test
 
 production:
   <<: *default
+  adapter: postgresql
   database: mycontacts
